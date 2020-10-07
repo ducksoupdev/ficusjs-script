@@ -69,7 +69,7 @@
 <pre><code class="language-html">&lt;div id=&quot;content&quot;&gt;&lt;/div&gt;
 
 &lt;script type=&quot;module&quot;&gt;
-import { loadScript } from 'https://unpkg.com/ficusjs-script?module'
+import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
 const markdownToRender = `# FicusJS script loader
 
 Dynamically load ES modules and ES5 scripts.
@@ -95,7 +95,7 @@ loadScript('https://unpkg.com/marked@1.2.0/lib/marked.esm.js')
 <blockquote>
 <p>Alternatively, fork this Codepen to see it in action - <a href="https://codepen.io/ducksoupdev/pen/abZbdbq">https://codepen.io/ducksoupdev/pen/abZbdbq</a></p>
 </blockquote>
-<p>The example creates a set of page components, a page navigation component and a new router using hash mode.</p>
+<p>The example imports the <a href="https://www.npmjs.com/package/marked">marked</a> ES module and converts some markdown to HTML.</p>
 
     </article>
   </div>

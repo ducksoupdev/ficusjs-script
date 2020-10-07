@@ -73,7 +73,7 @@
 <p>You can use a package within the browser by loading the file it distributes by copying it to a path the browser can access.
 Alternatively, you can use the NPM package CDN named <a href="https://unpkg.com/">Unpkg</a>. <a href="https://unpkg.com/">Unpkg</a> is a fast, CDN for everything on NPM. Use it to quickly and easily load any file from any package using a URL like <code>unpkg.com/:package@:version/:file</code></p>
 <p>To use the <a href="https://www.npmjs.com/package/marked">marked</a> package which provides an ES6 module:</p>
-<pre><code class="language-js">import { loadScript } from 'https://unpkg.com/ficusjs-script?module'
+<pre><code class="language-js">import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
 
 // ES6 module - uses *.esm.js file name convention
 // this script won't load if ES6 is not supported
@@ -95,7 +95,7 @@ loadScript({
 <p>Using a native ES6 import <code>import()</code> to resolve a script, only works with static strings. If you want to use dynamic paths to scripts based on configuration,
 the <code>loadScript</code> function can load ES6 modules, ES5 scripts or both.</p>
 <p>You can load single or multiple scripts.</p>
-<pre><code class="language-js">import { loadScript } from 'https://unpkg.com/ficusjs-script?module'
+<pre><code class="language-js">import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
 
 // load single script
 loadScript('/js/script1.esm.js')
@@ -117,7 +117,7 @@ loadScript(
 </code></pre>
 <h4>Router example</h4>
 <p>An example of using <code>loadScript</code> in a route.</p>
-<pre><code class="language-js">import { loadScript } from 'https://unpkg.com/ficusjs-script?module'
+<pre><code class="language-js">import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
 import { createRouter } from 'https://unpkg.com/ficusjs-router?module'
 
 // use the loadScript to load an ES6 module for a route
@@ -136,7 +136,7 @@ import { createRouter } from 'https://unpkg.com/ficusjs-router?module'
 <li>Using an object to specify the type is module and optionally disable caching</li>
 </ol>
 <p>Loading ES6 modules is used to import bindings which are exported by the module.</p>
-<pre><code class="language-js">import { loadScript } from 'https://unpkg.com/ficusjs-script?module'
+<pre><code class="language-js">import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
 
 // using the file name convention of *.esm.js
 loadScript('./views/home.esm.js')
@@ -185,7 +185,7 @@ let module = await loadScript('./views/home.esm.js')
 <h4>ES6 modules with ES5 fallback for older browsers</h4>
 <p>Using the <code>loadScript</code> function to load ES6 modules with an ES5 fallback will detect if the browser supports ES6 and then automatically fallback to loading the ES5 script if not supported.</p>
 <p>To use this feature, you need to pass a two-item <code>Array</code> - the first item is the ES6 module and the second item is the ES5 fallback script:</p>
-<pre><code class="language-js">import { loadScript } from 'https://unpkg.com/ficusjs-script?module'
+<pre><code class="language-js">import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
 
 // load scripts based on file names
 loadScript(
@@ -231,7 +231,7 @@ let module = await loadScript(
 <li>Using the path to the script</li>
 <li>Using an object to optionally disable caching</li>
 </ol>
-<pre><code class="language-js">import { loadScript } from 'https://unpkg.com/ficusjs-script?module'
+<pre><code class="language-js">import { loadScript } from 'https://unpkg.com/ficusjs-script@1.0.1/dist/script.js'
 
 // using the file name convention of *.esm.js
 loadScript('./views/home.iife.js')
